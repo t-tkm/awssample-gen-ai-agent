@@ -1,6 +1,4 @@
-# Pyhton外部モジュールのインポート
 import streamlit as st
-from annotated_text import annotated_text
 from langchain_aws import ChatBedrock
 from langchain_core.messages import HumanMessage, SystemMessage
 
@@ -9,10 +7,7 @@ MAX_TOKENS = 4000
 
 st.title("Let's compare the AWS services!")
 st.write("AWSソリューションアーキテクトの役割を持つ生成AIエージェントが、2つのサービスの比較議論を行います。")
-annotated_text(
-    "ここで利用されるLLMは",
-    (BEDROCK_LLM_MODEL_ID, "bedrock_llm_model_id"),
-    "です。",)
+st.write("ここで利用されるLLMモデルは「"+BEDROCK_LLM_MODEL_ID+"」です。")
 
 chat = ChatBedrock(
     model_id=BEDROCK_LLM_MODEL_ID,

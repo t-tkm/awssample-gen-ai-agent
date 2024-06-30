@@ -18,9 +18,6 @@ ECS vs EKSのようなテーマで、生成AIエージェントが比較議論�
 - 上記を、日本語で、Markdown記法に変換してください。
 ```
 
-```
-```
-
 ## QuickStart
 - Checkout the code
     ```
@@ -54,7 +51,7 @@ sampleディレクトリに実行結果のサンプルを格納しています�
 ## LLMモデル
 「anthropic.claude-3-5-sonnet-20240620-v1:0    |  Claude 3.5 Sonnet               |  Anthropic」を使用。
 
-
+(参考)
 ```
 aws bedrock list-foundation-models --output table --query 'modelSummaries[*].[modelId,modelName,providerName]'
 
